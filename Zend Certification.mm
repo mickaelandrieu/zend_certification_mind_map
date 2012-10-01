@@ -1794,7 +1794,230 @@
 </node>
 </node>
 </node>
-<node CREATED="1348813749057" ID="ID_66393403" MODIFIED="1348813754509" TEXT="HTTP Headers"/>
+<node CREATED="1348813749057" FOLDED="true" ID="ID_66393403" MODIFIED="1349071346574" TEXT="HTTP Headers">
+<node CREATED="1349068083708" FOLDED="true" ID="ID_557969323" MODIFIED="1349071343502" TEXT="Can overwrite headers withe header()">
+<node CREATED="1349068110308" ID="ID_970640426" MODIFIED="1349068119265" TEXT="have to send valid header"/>
+<node CREATED="1349068120996" FOLDED="true" ID="ID_144155467" MODIFIED="1349071342766" TEXT="must be call before any output">
+<node CREATED="1349068163374" ID="ID_1932621802" MODIFIED="1349068170131" TEXT="PHP error"/>
+<node CREATED="1349068170391" ID="ID_146540060" MODIFIED="1349068175859" TEXT="header has no effect"/>
+<node CREATED="1349068183111" ID="ID_988286835" MODIFIED="1349068347026" TEXT="can do it with buffering">
+<icon BUILTIN="info"/>
+</node>
+</node>
+</node>
+<node CREATED="1349068100955" FOLDED="true" ID="ID_1614325869" MODIFIED="1349071341462" TEXT="Redirection">
+<node CREATED="1349068269188" ID="ID_876342233" MODIFIED="1349068291665" TEXT="header(&apos;Location: http://www.phparch.com&apos;)"/>
+<node CREATED="1349068307925" ID="ID_694493611" MODIFIED="1349068316986" TEXT="request header to change location"/>
+<node CREATED="1349068317573" ID="ID_1295676835" MODIFIED="1349068352556" TEXT="needs to add exit() to be sure that no code is executed after"/>
+<node CREATED="1349068362432" FOLDED="true" ID="ID_1916861545" MODIFIED="1349068519568" TEXT="can be use to avoid &quot;do you wish to repost this form&quot;">
+<node CREATED="1349068383217" ID="ID_795202184" MODIFIED="1349068417687" TEXT="after user submitted form"/>
+<node CREATED="1349068392297" ID="ID_1740825246" MODIFIED="1349068412055" TEXT="script that treat data redirect with Location"/>
+</node>
+</node>
+<node CREATED="1349068521167" FOLDED="true" ID="ID_1051942975" MODIFIED="1349071340846" TEXT="Compression">
+<node CREATED="1349068526111" ID="ID_1362912325" MODIFIED="1349068547957" TEXT="gzip algo use"/>
+<node CREATED="1349068559441" ID="ID_311631364" MODIFIED="1349068570470" TEXT="performed on the fly"/>
+<node CREATED="1349068570905" ID="ID_1759371956" MODIFIED="1349068580687" TEXT="can be greedy in ressources"/>
+<node CREATED="1349068588147" FOLDED="true" ID="ID_1776033227" MODIFIED="1349068842047" TEXT="level of compression configurable from 1 to 9">
+<node CREATED="1349068606371" ID="ID_1923736541" MODIFIED="1349068611288" TEXT="1 least compression"/>
+<node CREATED="1349068611691" ID="ID_1400448225" MODIFIED="1349068618816" TEXT="9 most compression"/>
+<node CREATED="1349068626900" ID="ID_156281642" MODIFIED="1349068630265" TEXT="6 default"/>
+</node>
+<node CREATED="1349068658622" ID="ID_1412611734" MODIFIED="1349068687124" TEXT="if compression activated, will be use based on &apos;Accept&apos; &apos;s browser header"/>
+<node CREATED="1349068692232" ID="ID_1639501791" MODIFIED="1349068710077" TEXT="page will be compressed only for browser that can handle it"/>
+<node CREATED="1349068714441" ID="ID_703692339" MODIFIED="1349068745127" TEXT="use ob_start(&apos;ob_gzhandler&apos;) to compress a specific page"/>
+<node CREATED="1349068761946" FOLDED="true" ID="ID_1150451426" MODIFIED="1349068840742" TEXT="use php directives for whole site">
+<node CREATED="1349068776667" ID="ID_1184151842" MODIFIED="1349068788785" TEXT="zlib.outpu_compression = on"/>
+<node CREATED="1349068776667" ID="ID_799885569" MODIFIED="1349068801434" TEXT="zlib.outpu_compression_level = 9"/>
+<node CREATED="1349068811797" ID="ID_1774622447" MODIFIED="1349068827131" TEXT="this is considered best practice to activate compression"/>
+</node>
+</node>
+<node CREATED="1349068845326" FOLDED="true" ID="ID_1308434767" MODIFIED="1349071340206" TEXT="Caching">
+<node CREATED="1349068935307" ID="ID_592621909" MODIFIED="1349068958545" TEXT="By default most browser will attempt to cache as much as they can"/>
+<node CREATED="1349068959300" ID="ID_1498113328" MODIFIED="1349068993922" TEXT="all browser have quirks in how they handle the instructions"/>
+<node CREATED="1349068994821" FOLDED="true" ID="ID_1265403043" MODIFIED="1349069438083" TEXT="don&apos;t cache exemple">
+<node CREATED="1349069008311" ID="ID_114302739" MODIFIED="1349069043837" TEXT="header(&apos;Cache-Control: no-cache, must-revalidate&apos;);"/>
+<node CREATED="1349069045488" ID="ID_1997502003" MODIFIED="1349069073479" TEXT="header(&apos;Expires: Thu, 31 May 1984 04:35:00 GMT&apos;)"/>
+</node>
+<node CREATED="1349069086322" FOLDED="true" ID="ID_1534131332" MODIFIED="1349069437411" TEXT="cache for 30 days exemple">
+<node CREATED="1349069096747" ID="ID_580448891" MODIFIED="1349069124921" TEXT="$date = gmdate(&apos;D, j M Y H:i:s&apos;, time());"/>
+<node CREATED="1349069125196" ID="ID_1926508685" MODIFIED="1349069163763" TEXT="header(&apos;Expires: &apos; . $date . &apos; UTC&apos;);"/>
+<node CREATED="1349069169566" ID="ID_873747780" MODIFIED="1349069183403" TEXT="header(&apos;Cache-Control: Public&apos;)"/>
+<node CREATED="1349069183831" ID="ID_1978038983" MODIFIED="1349069196221" TEXT="header(&apos;Pragma: Public&apos;)"/>
+</node>
+</node>
+<node CREATED="1349069439867" FOLDED="true" ID="ID_1266575036" MODIFIED="1349071339590" TEXT="Cookies">
+<node CREATED="1349069443867" ID="ID_1041021693" MODIFIED="1349069466665" TEXT="Can store small amount (4-6Kb)"/>
+<node CREATED="1349069467156" ID="ID_1077578691" MODIFIED="1349069497490" TEXT="Mostly use to maintain session state"/>
+<node CREATED="1349069506030" ID="ID_28945054" MODIFIED="1349069517604" TEXT="set by server using  response header"/>
+<node CREATED="1349069527104" FOLDED="true" ID="ID_836680019" MODIFIED="1349070314661" TEXT="Not a secure storage meacanism">
+<node CREATED="1349069537991" ID="ID_1581960272" MODIFIED="1349069550037" TEXT="have no control of the client side"/>
+<node CREATED="1349069569441" ID="ID_64025391" MODIFIED="1349069580999" TEXT="most browser can disable them"/>
+<node CREATED="1349069607683" ID="ID_586668996" MODIFIED="1349069619624" TEXT="should be traited as tainted until proven otherwise"/>
+</node>
+<node CREATED="1349069632140" FOLDED="true" ID="ID_1781495294" MODIFIED="1349071319196" TEXT="setcookie(&apos;hide_menu&apos;, &apos;1&apos;)">
+<node CREATED="1349069662126" ID="ID_1754762621" MODIFIED="1349069673467" TEXT="default cookie will expire at users session end"/>
+<node CREATED="1349069694440" FOLDED="true" ID="ID_612494399" MODIFIED="1349070312333" TEXT="3rd param to specify expiration date (Timestamp)">
+<node CREATED="1349069739985" ID="ID_252350658" MODIFIED="1349069763266" TEXT="setcookie(&apos;hide_menu&apos;, &apos;1&apos;, time() + 3600)"/>
+<node CREATED="1349069772051" ID="ID_1681704847" MODIFIED="1349069792112" TEXT="can not guarantee cookie existence at before existence date"/>
+</node>
+<node CREATED="1349069800853" FOLDED="true" ID="ID_1405634975" MODIFIED="1349070311501" TEXT="4th arg for path relative to website root">
+<node CREATED="1349069831542" ID="ID_1807538202" MODIFIED="1349069856844" TEXT="browser will send cookie on ly in those path"/>
+</node>
+<node CREATED="1349069857751" FOLDED="true" ID="ID_553481331" MODIFIED="1349070310725" TEXT="5th arg for domain">
+<node CREATED="1349069884048" ID="ID_528896982" MODIFIED="1349069928344" TEXT="allows you to limit access to the cookie within a specific domain or hostname"/>
+<node CREATED="1349069930475" ID="ID_471978094" MODIFIED="1349069946897" TEXT="can not set a value that is not from the website domain">
+<node CREATED="1349069947707" ID="ID_1958211092" MODIFIED="1349069964721" TEXT="www.ceetmax.com can set toto.ceetmax.com"/>
+<node CREATED="1349069965364" ID="ID_1530521779" MODIFIED="1349069973777" TEXT="can not set microsoft.com"/>
+</node>
+</node>
+<node CREATED="1349069982021" FOLDED="true" ID="ID_1421654920" MODIFIED="1349070310165" TEXT="6th arg for secure">
+<node CREATED="1349069995678" ID="ID_1678578372" MODIFIED="1349070004787" TEXT="cookie is used only on HTTPS mode"/>
+</node>
+</node>
+<node CREATED="1349070009223" FOLDED="true" ID="ID_62512943" MODIFIED="1349071317997" TEXT="Accessing Cookie data">
+<node CREATED="1349070015910" ID="ID_40239379" MODIFIED="1349070042253" TEXT="through $_COOKIE[&apos;hide_menu&apos;]"/>
+<node CREATED="1349070047624" ID="ID_1146768826" MODIFIED="1349070053142" TEXT="can store only scalar"/>
+<node CREATED="1349070068106" FOLDED="true" ID="ID_478313436" MODIFIED="1349070307925" TEXT="can store using array notation">
+<node CREATED="1349070086722" ID="ID_458290321" MODIFIED="1349070102464" TEXT="setcookie(&apos;test_cookie[0]&apos;, &apos;toto&apos;);"/>
+<node CREATED="1349070086722" ID="ID_1199413926" MODIFIED="1349070109658" TEXT="setcookie(&apos;test_cookie[1]&apos;, &apos;toto&apos;);"/>
+<node CREATED="1349070086722" ID="ID_1149412539" MODIFIED="1349070114280" TEXT="setcookie(&apos;test_cookie[2]&apos;, &apos;toto&apos;);"/>
+<node CREATED="1349070126564" ID="ID_1102301028" MODIFIED="1349070150322" TEXT="echo $_COOKIE[&apos;test_cookie&apos;][0] //toto"/>
+</node>
+<node CREATED="1349070161606" ID="ID_1673159328" MODIFIED="1349070181476" TEXT="keep in mind available amount of storage is limited"/>
+<node CREATED="1349070187143" FOLDED="true" ID="ID_159724805" MODIFIED="1349070306565" TEXT="cookie are accessible AFTER they&apos;re sent to the browser">
+<node CREATED="1349070211336" ID="ID_536997819" MODIFIED="1349070218453" TEXT="phase 1 send to browser"/>
+<node CREATED="1349070218897" ID="ID_730338343" MODIFIED="1349070239254" TEXT="phase 2 - new http request - browser make accessible to server"/>
+</node>
+<node CREATED="1349070246777" ID="ID_789124309" MODIFIED="1349070258104" TEXT="cookies can&apos;t be &quot;deleted&quot; for sure"/>
+<node CREATED="1349070258442" ID="ID_581775809" MODIFIED="1349070299497" TEXT="can make them &quot;unuseable&quot; by setting false and providing past expiration date"/>
+</node>
+</node>
+<node CREATED="1349070319069" FOLDED="true" ID="ID_1003016" MODIFIED="1349071338894" TEXT="Session">
+<node CREATED="1349070472500" ID="ID_69583293" MODIFIED="1349070480101" TEXT="HTTP stateless protocol"/>
+<node CREATED="1349070480437" ID="ID_1250534779" MODIFIED="1349070521052" TEXT="webserver does not know (or care) if 2 requests come from the same user"/>
+<node CREATED="1349070522278" ID="ID_1673178710" MODIFIED="1349070552390" TEXT="session use to create measure of state in between requests"/>
+<node CREATED="1349070563065" FOLDED="true" ID="ID_1552875272" MODIFIED="1349071321277" TEXT="session maintained by passing unique identifier">
+<node CREATED="1349070583802" ID="ID_155965190" MODIFIED="1349070593016" TEXT="usually by cookie"/>
+<node CREATED="1349070593346" ID="ID_1199749282" MODIFIED="1349070604760" TEXT="or GET"/>
+</node>
+<node CREATED="1349070627363" FOLDED="true" ID="ID_449648814" MODIFIED="1349071321877" TEXT="PHP handle transparently where to put session id">
+<node CREATED="1349070649213" ID="ID_272727770" MODIFIED="1349070670275" TEXT="if session.use_trans_sid = on">
+<node CREATED="1349070673030" ID="ID_525491986" MODIFIED="1349070707621" TEXT="by default off in PHP5"/>
+<node CREATED="1349070710416" ID="ID_609447158" MODIFIED="1349070727606" TEXT="handle url rewritting if cookie off on browser side"/>
+</node>
+</node>
+<node CREATED="1349070732105" FOLDED="true" ID="ID_11637940" MODIFIED="1349071328741" TEXT="PHP handle place where session data is put">
+<node CREATED="1349070747153" ID="ID_316981990" MODIFIED="1349070756479" TEXT="by default in PHP servers temp dir in a file"/>
+</node>
+<node CREATED="1349070772875" FOLDED="true" ID="ID_171207288" MODIFIED="1349071337014" TEXT="session can be start">
+<node CREATED="1349070779139" FOLDED="true" ID="ID_1480736793" MODIFIED="1349071332037" TEXT="using session.auto_start">
+<node CREATED="1349070806941" ID="ID_1467685801" MODIFIED="1349070814682" TEXT="will start session automatically"/>
+<node CREATED="1349070817293" FOLDED="true" ID="ID_683150813" MODIFIED="1349071331046" TEXT="if use can not store object in session">
+<node CREATED="1349070829253" ID="ID_936458139" MODIFIED="1349070843371" TEXT="because object definition wont be loaded session starts"/>
+</node>
+</node>
+<node CREATED="1349070854775" FOLDED="true" ID="ID_60957138" MODIFIED="1349071334710" TEXT="using session_start()">
+<node CREATED="1349070863927" FOLDED="true" ID="ID_1311156578" MODIFIED="1349071333814" TEXT="need to put it before any output">
+<node CREATED="1349070940307" ID="ID_1027568451" MODIFIED="1349070958201" TEXT="because will try to send cookie with session _id"/>
+</node>
+<node CREATED="1349070892608" ID="ID_1728182545" MODIFIED="1349070902975" TEXT="need to put it everywhere you need session"/>
+<node CREATED="1349070962948" ID="ID_438187290" MODIFIED="1349071012228" TEXT="when changing user privileges call session _regenerate_id() to prevent &quot;session fixation attack&quot;"/>
+</node>
+</node>
+<node CREATED="1349071018486" FOLDED="true" ID="ID_1384623930" MODIFIED="1349071335854" TEXT="Accessing Session Data">
+<node CREATED="1349071027967" ID="ID_1735475435" MODIFIED="1349071033630" TEXT="once session started"/>
+<node CREATED="1349071033871" ID="ID_27985197" MODIFIED="1349071042613" TEXT="use $_SESSION superglobal"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1349071349599" ID="ID_1665377580" MODIFIED="1349071364827" POSITION="right" TEXT="Object Oriented Programming in PHP">
+<node CREATED="1349071689406" FOLDED="true" ID="ID_1595952009" MODIFIED="1349073779546" TEXT="Object instanciating">
+<node CREATED="1349071695463" FOLDED="true" ID="ID_1509471290" MODIFIED="1349073778538" TEXT="use new">
+<node CREATED="1349071711543" ID="ID_1177712664" MODIFIED="1349071725149" TEXT="$myInstance = new myClass();"/>
+</node>
+<node CREATED="1349071727769" FOLDED="true" ID="ID_1272914225" MODIFIED="1349073777258" TEXT="Object always passed by reference">
+<node CREATED="1349071751089" ID="ID_163687679" MODIFIED="1349071776583" TEXT="in reallity it is passed by handle"/>
+<node CREATED="1349071777379" ID="ID_1924894959" MODIFIED="1349071800320" TEXT="but for pratical purposes there is no differences"/>
+<node CREATED="1349071808948" ID="ID_374444285" MODIFIED="1349071822209" TEXT="$myInstance = new myClass()"/>
+<node CREATED="1349071822700" ID="ID_1162750094" MODIFIED="1349071835970" TEXT="$copy = $myInstance;"/>
+<node CREATED="1349071836781" ID="ID_602671654" MODIFIED="1349071850435" TEXT="Both variables will point to the same object"/>
+<node CREATED="1349071860366" ID="ID_1394651763" MODIFIED="1349071876724" TEXT="was not the default behavior in PHP 4"/>
+</node>
+</node>
+<node CREATED="1349072130699" FOLDED="true" ID="ID_128509787" MODIFIED="1349073780315" TEXT="Class Methods and Properties">
+<node CREATED="1349072319276" FOLDED="true" ID="ID_201179891" MODIFIED="1349073775010" TEXT="Constructor">
+<node CREATED="1349072152028" ID="ID_1206686150" MODIFIED="1349072168978" TEXT="PHP5 introduce the unified constructor"/>
+<node CREATED="1349072181294" FOLDED="true" ID="ID_1985957641" MODIFIED="1349073772882" TEXT="PHP4 used methods with smae name as class as constructor">
+<node CREATED="1349072207440" ID="ID_1875119009" MODIFIED="1349072229101" TEXT="could be problematic if had to rename class"/>
+</node>
+<node CREATED="1349072237049" ID="ID_1407021232" MODIFIED="1349072253230" TEXT="__METHOD__ is replaced by method name at compilation"/>
+<node CREATED="1349072258474" ID="ID_396580364" MODIFIED="1349072282087" TEXT="if PHP5 don&apos;t find __construct() it will look for php4 construct style"/>
+</node>
+<node CREATED="1349072328709" FOLDED="true" ID="ID_515606115" MODIFIED="1349073771514" TEXT="Destructor">
+<node CREATED="1349072340085" ID="ID_1889815401" MODIFIED="1349072352139" TEXT="__destruct() introduced in PHP5"/>
+<node CREATED="1349072458403" ID="ID_1907624016" MODIFIED="1349072473336" TEXT="Destruction occurs when all references are gone"/>
+<node CREATED="1349072480108" FOLDED="true" ID="ID_496763628" MODIFIED="1349073770146" TEXT="may not occurs when you think">
+<node CREATED="1349072495285" ID="ID_1700553374" MODIFIED="1349072503562" TEXT="$a = new foo();"/>
+<node CREATED="1349072503837" ID="ID_791615366" MODIFIED="1349072507314" TEXT="$b = $a;"/>
+<node CREATED="1349072507886" FOLDED="true" ID="ID_363722929" MODIFIED="1349073769042" TEXT="unset($a)">
+<node CREATED="1349072514550" ID="ID_645714063" MODIFIED="1349072536924" TEXT="Will not call destructor because $a is referenced in $b"/>
+</node>
+</node>
+<node CREATED="1349072551880" ID="ID_1806632666" MODIFIED="1349072571181" TEXT="__destruct() call at script end (this is a sure thing)"/>
+<node CREATED="1349072571849" FOLDED="true" ID="ID_712394007" MODIFIED="1349073767209" TEXT="you can not know in which order object are going to be destroy">
+<node CREATED="1349072597962" ID="ID_1976958699" MODIFIED="1349072610599" TEXT="watch out for dependencies"/>
+</node>
+</node>
+<node CREATED="1349072650964" FOLDED="true" ID="ID_981703227" MODIFIED="1349073764505" TEXT="Visiblity">
+<node CREATED="1349072656204" ID="ID_360116755" MODIFIED="1349072782592" TEXT="PPP"/>
+<node CREATED="1349072783162" ID="ID_889193956" MODIFIED="1349072786592" TEXT="private"/>
+<node CREATED="1349072786931" ID="ID_1150595422" MODIFIED="1349072789863" TEXT="protected"/>
+<node CREATED="1349072790163" ID="ID_1558732948" MODIFIED="1349072791800" TEXT="public"/>
+<node CREATED="1349072792115" FOLDED="true" ID="ID_1768572090" MODIFIED="1349072915929" TEXT="final">
+<node CREATED="1349072794307" ID="ID_181193589" MODIFIED="1349072804816" TEXT="can be apply on class and methods"/>
+<node CREATED="1349072805356" ID="ID_622890579" MODIFIED="1349072816657" TEXT="when apply resource can not be extended"/>
+<node CREATED="1349072847470" ID="ID_176208814" MODIFIED="1349072856787" TEXT="Resource accessible from any scope"/>
+</node>
+</node>
+<node CREATED="1349072918137" FOLDED="true" ID="ID_1410229128" MODIFIED="1349073763033" TEXT="Declaring and Accessing Properties">
+<node CREATED="1349072942811" FOLDED="true" ID="ID_935755866" MODIFIED="1349073762041" TEXT="Initialization like">
+<node CREATED="1349072957675" ID="ID_847895679" MODIFIED="1349072966200" TEXT="private $bar = &apos;toto&apos;;"/>
+</node>
+<node CREATED="1349072967243" ID="ID_425410152" MODIFIED="1349072979609" TEXT="can only be use for assigning values"/>
+<node CREATED="1349072980276" ID="ID_454828240" MODIFIED="1349072991226" TEXT="no expession nor function call"/>
+<node CREATED="1349072991549" ID="ID_1780337684" MODIFIED="1349073001523" TEXT="this will be done in constructor()"/>
+</node>
+<node CREATED="1349073160469" FOLDED="true" ID="ID_1680658853" MODIFIED="1349073759585" TEXT="Constants, Static methods and properties">
+<node CREATED="1349073182046" ID="ID_627537251" MODIFIED="1349073231957" TEXT="make methods / properties accessible outside the object context"/>
+<node CREATED="1349073303724" FOLDED="true" ID="ID_1788078317" MODIFIED="1349073757529" TEXT="access is made using &apos;::&apos; operator">
+<node CREATED="1349073320021" ID="ID_125059415" MODIFIED="1349073349171" TEXT="Paamayin Nekudotayim"/>
+<node CREATED="1349073349510" ID="ID_674536350" MODIFIED="1349073364755" TEXT="hebrew for double  colon"/>
+<node CREATED="1349073398151" ID="ID_371345581" MODIFIED="1349073409213" TEXT="scope resolution operator"/>
+</node>
+<node CREATED="1349073427066" ID="ID_1274623452" MODIFIED="1349073439263" TEXT="PHP4 allowed to call any method with ::"/>
+<node CREATED="1349073439722" FOLDED="true" ID="ID_1914224303" MODIFIED="1349073756201" TEXT="PHP5 is strictier">
+<node CREATED="1349073457362" FOLDED="true" ID="ID_838475234" MODIFIED="1349073755081" TEXT="if call static properties with &apos;-&gt;&apos; operator">
+<node CREATED="1349073485876" ID="ID_1693423944" MODIFIED="1349073502770" TEXT="PHP emit strict standard message"/>
+<node CREATED="1349073503509" ID="ID_540013869" MODIFIED="1349073519083" TEXT="PHP emit notice message"/>
+<node CREATED="1349073561016" ID="ID_1815325856" MODIFIED="1349073570789" TEXT="this does not happen with methods call"/>
+</node>
+<node CREATED="1349073573008" FOLDED="true" ID="ID_1382443373" MODIFIED="1349073754249" TEXT="if call statically non static method">
+<node CREATED="1349073591505" ID="ID_600896100" MODIFIED="1349073599103" TEXT="PHP emit strict standard message"/>
+</node>
+</node>
+<node CREATED="1349073616298" FOLDED="true" ID="ID_1478038554" MODIFIED="1349073752681" TEXT="static must be followed by visibility">
+<node CREATED="1349073632755" ID="ID_1214031204" MODIFIED="1349073642641" TEXT="otherwise considered as public"/>
+</node>
+<node CREATED="1349073658244" FOLDED="true" ID="ID_943836153" MODIFIED="1349073751953" TEXT="class constants">
+<node CREATED="1349073688230" ID="ID_217405834" MODIFIED="1349073690316" TEXT="are public and accessible from all scope"/>
+<node CREATED="1349073691566" ID="ID_465529333" MODIFIED="1349073703420" TEXT="has same limitation has define()"/>
+<node CREATED="1349073704110" ID="ID_305375273" MODIFIED="1349073710268" TEXT="can only store scalar"/>
+<node CREATED="1349073720680" ID="ID_1465445639" MODIFIED="1349073727813" TEXT="faster than define()"/>
+</node>
+</node>
+</node>
 </node>
 </node>
 </map>
