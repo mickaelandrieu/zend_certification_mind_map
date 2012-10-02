@@ -2018,6 +2018,34 @@
 </node>
 </node>
 </node>
+<node CREATED="1349154571766" FOLDED="true" ID="ID_1021878782" MODIFIED="1349155058887" TEXT="Interfaces and Abstracts">
+<node CREATED="1349154585001" ID="ID_1288755013" MODIFIED="1349154592934" TEXT="new to PHP 5"/>
+<node CREATED="1349154593521" ID="ID_968441869" MODIFIED="1349154642519" TEXT="you must declare a class as abstract if you declare 1 method as abstract"/>
+<node CREATED="1349154643368" ID="ID_1187398452" MODIFIED="1349154672191" TEXT="a class can extend only 1 class but can implement as many interfaces as needed"/>
+<node CREATED="1349154860163" ID="ID_478623236" MODIFIED="1349154891639" TEXT="use &quot;$myObject instanceof MyClass&quot; to determine object class">
+<node CREATED="1349154892496" ID="ID_525396169" MODIFIED="1349154897524" TEXT="can see parent"/>
+<node CREATED="1349154897784" ID="ID_31595285" MODIFIED="1349154905029" TEXT="can see implemented interfaces"/>
+</node>
+</node>
+<node CREATED="1349155059986" ID="ID_1103995696" MODIFIED="1349155062729" TEXT="Exceptions">
+<node CREATED="1349155110441" ID="ID_458138804" MODIFIED="1349155125797" TEXT="Exception are object created or thrown"/>
+<node CREATED="1349155126248" ID="ID_1657056760" MODIFIED="1349155154965" TEXT="Exception can be handled at different points in a scripts execution"/>
+<node CREATED="1349155155955" ID="ID_750102685" MODIFIED="1349155181746" TEXT="Different type of exceptin can be handled by different portion of code"/>
+<node CREATED="1349155183697" ID="ID_1520028004" MODIFIED="1349155190570" TEXT="All unhandled exception are fatal"/>
+<node CREATED="1349155193296" ID="ID_1643070598" MODIFIED="1349155211781" TEXT="Exceptions can be thrown from __constructor()"/>
+<node CREATED="1349155215235" ID="ID_531003794" MODIFIED="1349155229070" TEXT="Exception changes the flow of an application"/>
+<node CREATED="1349155307340" ID="ID_1111325288" MODIFIED="1349155312778" TEXT="Basic exception class">
+<node CREATED="1349155313667" ID="ID_167024255" MODIFIED="1349155342038" TEXT="Most of info filled for us by interpreter"/>
+</node>
+<node CREATED="1349155358984" ID="ID_1668017078" MODIFIED="1349155364775" TEXT="Throwing Exception">
+<node CREATED="1349155504908" ID="ID_1746001618" MODIFIED="1349155518027" TEXT="can define a &quot;catch-all&quot; function"/>
+<node CREATED="1349155522275" ID="ID_1083861930" MODIFIED="1349155529993" TEXT="set_exception_handler"/>
+<node CREATED="1349155530437" ID="ID_497594638" MODIFIED="1349155559514" TEXT="will be call when an exception get to the surface without beeing catched"/>
+<node CREATED="1349155650890" ID="ID_1774773785" MODIFIED="1349155673823" TEXT="when exception comes to this function exception already caused a Fatal error"/>
+<node CREATED="1349155771195" ID="ID_1526553769" MODIFIED="1349155787970" TEXT="can restore previous handler with restore_exception_handler()"/>
+</node>
+<node CREATED="1349155792773" ID="ID_1892204005" MODIFIED="1349155796813" TEXT="Lazy Loading"/>
+</node>
 </node>
 </node>
 </map>
