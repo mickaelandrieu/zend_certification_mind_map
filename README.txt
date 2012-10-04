@@ -16,3 +16,7 @@ May the force be with you all.
 About the Oriented Object Programming in PHP chapter :
 I very well know most of its content so I'm only putting what's might have skipped from my mind.
 Once again you really have to buy the book...
+
+About the code dir :
+I may had code that from the book. I do it only if I think that I need to write it down and make it works to
+have a better understanding on what's going on.
