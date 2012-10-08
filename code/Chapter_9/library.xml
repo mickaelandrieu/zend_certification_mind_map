@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<library>
+    <book isbn="0123456789">
+        <title>Toto is beau</title>
+        <author>R. Rodney</author>
+        <publisher>Del Rey</publisher>
+    </book>
+    <book isbn="0123456799">
+        <title>Toto is moche</title>
+        <author>R. Roro</author>
+        <publisher>Hachat</publisher>
+    </book>
+    <book isbn="0123456989">
+        <title>Toto is malin</title>
+        <author>R. Momo</author>
+        <publisher>Larousse</publisher>
+    </book>
+    <book isbn="0123459789">
+        <title>Toto is Zend</title>
+        <author>R. Mess</author>
+        <publisher>Orealy</publisher>
+    </book>
+</library>
