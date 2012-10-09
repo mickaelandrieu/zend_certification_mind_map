@@ -1,23 +1,26 @@
 <?xml version="1.0"?>
-<library>
-    <book isbn="0123456789">
+<library xmlns="http://ceetmax.com/library"
+         xmlns:meta="http://ceetmax.com/book-meta"
+         xmlns:pub="http://ceetmax.com/publisher"
+         xmlns:foo="http://ceetmax.com/foo">
+    <book meta:isbn="0123456789">
         <title>Toto is beau</title>
         <author>R. Rodney</author>
-        <publisher>Del Rey</publisher>
+        <pub:publisher>Del Rey</pub:publisher>
     </book>
-    <book isbn="0123456799">
+    <book meta:isbn="0123456799">
         <title>Toto is moche</title>
         <author>R. Roro</author>
-        <publisher>Hachat</publisher>
+        <pub:publisher>Hachat</pub:publisher>
     </book>
-    <book isbn="0123456989">
+    <book meta:isbn="0123456989">
         <title>Toto is malin</title>
         <author>R. Momo</author>
-        <publisher>Larousse</publisher>
+        <pub:publisher>Larousse</pub:publisher>
     </book>
-    <book isbn="0123459789">
+    <book meta:isbn="0123459789">
         <title>Toto is Zend</title>
         <author>R. Mess</author>
-        <publisher>Orealy</publisher>
+        <pub:publisher>Orealy</pub:publisher>
     </book>
 </library>
