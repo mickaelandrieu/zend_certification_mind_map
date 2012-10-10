@@ -18,5 +18,5 @@ I very well know most of its content so I'm only putting what's might have skipp
 Once again you really have to buy the book...
 
 About the code dir :
-I may had code that from the book. I do it only if I think that I need to write it down and make it works to
+I may add code that is from the book. I do it only if I think that I need to write it down and make it works to
 have a better understanding on what's going on.
